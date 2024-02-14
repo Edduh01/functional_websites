@@ -1,0 +1,60 @@
+/* CSS In simple term */
+/* Selector{
+  property:value;
+
+  CSS means Cascading Style Sheet. It cascades and the last style overide the rest
+} */
+
+h2 {
+  color: red;
+}
+p {
+  color: grey;
+}
+/* Below is cascading */
+p {
+  color: green;
+}
+/* li {
+  display:inline-block;
+} */
+.boxmodel {
+  border: 5px solid purple;
+  display: inline-block;
+  padding: 5px 20px;
+  margin: 0px 20px;
+}
+
+/* Life in the Wild */
+
+body{
+  margin: 0px;
+}
+
+h1{
+  font-family:fantasy;
+  font-size: 3em;
+  border-bottom:2px solid pink;
+  border-right: 2px solid pink;
+  width:400px;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+img{
+  width:450px;
+  height:300px;
+  margin: 10px;
+  transition: all 2s
+}
+
+img:hover{
+transform: scale(1.1)
+}
