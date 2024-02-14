@@ -1,0 +1,15 @@
+.icon{
+  color:red;
+  font-size:40px;
+}
+#title{
+  color:blue;
+  text-decoration:underline;
+}
+.container{
+  color:grey;
+}
+
+li{
+  list-style: none;
+}

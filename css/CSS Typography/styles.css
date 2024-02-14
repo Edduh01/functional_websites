@@ -1,0 +1,50 @@
+/* 
+1. Line height 
+2. Letter spacing
+3. Word transform
+4. Text spacing
+5. Text decoration
+*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+
+a{
+  font-size:3rem;
+  text-decoration: none;
+}
+/* It can be in px, rem, rem or even numbers */
+body{
+  line-height: 1.5;
+  font-size: 20px;
+}
+h1{
+  text-decoration: underline;
+    font-family: "Protest Guerrilla", sans-serif;
+  /* text-decoration: line-through; */
+}
+.one{
+  letter-spacing: 5px;
+  /* line-height: 2.5px; */
+}
+.two{
+  word-spacing: 10px;
+  text-transform:capitalize
+}
+.three{
+  text-decoration: overline;
+  line-height:2.5;
+}
+h2{
+  font-family: "Protest Riot", sans-serif;
+}
+
+.main{
+  letter-spacing: 5px;
+}
+p{
+    font-family: "Mr Dafoe", cursive;
+    font-size: 25px;
+}

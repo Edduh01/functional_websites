@@ -1,0 +1,83 @@
+/* The Display Property Affects Our Layout
+The Block Elements span across the page and they usually start a new line
+The inoine element does not span acrosss the page and they don't start a new line
+
+By default, some elements like p, h, div are block elements while elements like spans, a and igm are inline. They don't in a new line*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.block{
+  background: blue;
+  color: white;
+  /* display: block; */
+  /* display: inline; */
+  width: 300px;
+  /* The width is importnat not to span across */
+  margin: 2rem auto;
+  
+}
+.inline{
+  background: red;
+  color: white;
+  display:inline;
+  /* display: block; */
+}
+
+/* HORIZONTAL CENTERING 
+By centering a block element, I must first set the width. Then I put the margin like In have done above in the block class styles
+
+But if I want to centre the inline element, I will just centere the body. This will affect the whole body and the block elements text is the only one centered. This will centere the inline element*/
+/* body{
+  text-align: center;
+} */
+
+/* The browser always respect the width, height and margin of a block element but it does not respect the inline styles*/
+h2{
+  /* display: inline; */
+  background: green;
+  color: white;
+  width: 300px;
+  height: 200px;
+  margin-top: 20px; 
+  margin-bottom: 200px;
+}
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul li{
+  list-style-type:none;
+}
+ul li a{
+  color:orange;
+  text-decoration: none;
+  letter-spacing: 2px;
+  background: #222;
+  display: block;
+  padding: 5px;
+  margin: 10px 10px;
+}
+
+/* Border Box Property */
+.box-1, .box-2, .box-3{
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 1.5rem;
+}
+.box-1{
+  background: red;
+  padding: 20px;
+  /* box-sizing:border-box; */
+}
+.box-2{
+  background: blue;
+  padding: 20px;
+  /* box-sizing: border-box */
+}
+.box-3{
+  background: green;
+  padding: 20px;
+    /* box-sizing: border-box; */
+}

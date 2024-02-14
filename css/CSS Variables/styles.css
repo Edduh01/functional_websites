@@ -1,0 +1,101 @@
+*{
+  /* margin: 0; */
+    padding: 0;
+    box-sizing: border-box;
+}
+.fa-home{
+  color:blueviolet;
+font-size: 200px;}
+
+.simple-icon{
+  color:orange;
+}
+.social-icon{
+  color:purple;
+  font-size: 5rem;
+}
+:root{
+  --primaryColor:rgb(0, 149, 255);
+  --cl-secondary:purple;
+  --mainTransition:all 1s linear;
+  --mainSpacing:5px;
+}
+
+h1{
+  text-shadow: 2px 2px 5px red;
+  color: var(--primaryColor);
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+}
+h2{
+  color: var(--primaryColor);
+}
+h3{
+  color: var(--primaryColor);
+  transition: var(--mainTransition);
+}
+p{
+  letter-spacing: var(--mainSpacing);
+  transition:var(--mainTransition)
+}
+h3:hover{
+  color:var(--cl-secondary);
+}
+p:hover{
+  color:var(--cl-secondary);
+}
+div{
+  --primaryRed:red;
+}
+.main-text{
+  color:var(--primaryRed);
+}
+.box{
+  width: 200px;
+  height: 200px;
+  background: blue;
+  margin: 20px;
+  box-shadow: 10px 0px 0px green;
+  transition: all 2s ease-in-out;
+  animation: infinite;
+}
+h4{
+  /* text-align: center; */
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+.navbar{
+  background:red;
+  font-size: 2rem;
+  
+}
+nav{
+  background: blue;
+  font-size: 3rem;
+}
+ul li{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+img{
+  width: 100%;
+  display: block;
+  height: 300px;
+  object-fit: cover;
+}
+.one{
+  float: left;
+  width: 45%;
+  /* height: 50%; */
+  margin-right: 5%;
+}
+.two{
+  float: right;
+  width: 45%;
+  /* height: 50% */
+  margin-right: 5%;
+}
