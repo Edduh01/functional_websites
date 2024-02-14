@@ -1,0 +1,90 @@
+/* CSS syntax contain the following rules. 
+1. Selector (HTML tag elements) like h1, p,img that is targeted... 
+2. Declaration (The brackets) 
+3. CSS Properties like color, font-size,border... 
+4. CSS Values which defines the properties 
+After the property, we add the colons and the semicolons is like the full stop in CSS
+*/
+/* This is targeting HTML tag elements. h1, h2, h3 and p */
+body {
+  /* background-image: url(./images/background.jpeg); */
+  background-size: cover;
+  float: right;
+}
+
+h1 {
+  color: blueviolet;
+}
+
+h2 {
+  color: blue;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+h3 {
+  color: cadetblue;
+  background-color: pink;
+}
+
+p {
+  color: grey;
+  font-size: medium;
+}
+
+/* This is ID grouping 
+ID selector attribute MUST be unique ! ! It targets a selector with hash-tags (#)*/
+#inline {
+  color: red;
+  background-color: aqua;
+}
+
+/* DIV ans SPAN are used in grouping. The DIV groups multiple elements and the SPAN is used in the inline content. */
+div {
+  color: yellowgreen;
+}
+
+span {
+  color: green;
+}
+
+/* This is class grouping
+CLASS Selector selects what is same in the HTML documents with dot(.)*/
+.text {
+  color: black
+}
+
+.head {
+  color: red;
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+  border-style: solid;
+  border: 5px solid black
+}
+
+/*
+INHERISTANCE IN CSS - Child inherits styles from the parent unless, UNLESS, they have their own styles of the SAME! The child will overdie the parent styles
+*/
+body {
+  color: black;
+  /* The above won't affect if the child elements has their own styles */
+  font-family: sans-serif;
+  /* The above will be affect the whole body element because the children has no such styles */
+}
+
+/* Last Rule, Specificity and Universal Selector.
+-The first formarts of lets say our paragraph o top has the syles and we apply a different styles targeting the same paragraph, the last styles will apply 
+- Class has more specificity than the element selectors.
+- ID has more specificity than the class selectors.
+
+Universal Selectors
+*/
+img {
+  float: right;
+}
+
+footer {
+  float: clear;
+}

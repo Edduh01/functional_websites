@@ -1,0 +1,164 @@
+<!-- Start with the html declaration always-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <tittle></tittle>
+  </head>
+  <body>
+    <h1 id="home">Types of Links</h1> <!--I used this to act as a bookmark-->
+    <!-- External Links -->
+    <p>External Links</p> <!--Clicking the link will take to an external website-->
+    <a href="https://www.google.com/" target="_blank">Google</a>
+
+    <!-- Internal Links --> <!--Clicking this lin will take me to another html document in my VSC. I will use the paths-->
+    <p>Internal Links. Directs me to my another html document</p>
+    <a href="internal.html">Internal Links</a>
+
+    <!-- Single Page Links -->
+    <p>Same Page Link. It is like a bookmark</p>
+    <a href="#hungry">Hungry Man</a>
+
+    <!-- Image Links -->
+    <p>Image as a link. I click the image it directs me to the website</p> <!--I click the image it directs me to the website-->
+    <a href="https://www.udemy.com/">
+      <img src="images/udemy.png" target="_blank" alt="Udemy" />
+    </a>
+
+    <!-- Empt Links --> <!--Clicking this links will take you nowhere-->
+    <p>Empty/Dummy Links</p>
+    <a href="#">Empty link</a>
+
+    <h1>Hello World! My name is Edwine</h1>
+    <p>This is my first web page. Join me in learning HTML</p>
+     <h3 id="edwine">A relative image insert method</h3>
+    <img src="edwine.jpg" width="150' ="Edwine Arita" />
+    
+
+    <!-- This is an absoulte path -->
+    <h3>Using an absolute path to insert image</h3>
+    <p>This will show below when you mispell the src</p>
+    <img src="trading.png" width="250" alt="forex trading" />
+
+   <!-- This is a relative path -->
+    <h2>Using relative path to insert image</h2>
+    <img src="images/cat.jpeg" width="180" alt="Cat Image" />
+
+    <!-- Back to top link -->
+    <p>Back to Home</p>
+    <a href="#home">Back to Top</a>
+
+    <!-- Sub and Sup Elements -->
+    <h3>Sub and Sup Elements</h3>
+    <p>Hello there, I am sub <sub>SUB</sub> and here is sup <sup>SUP</sup></p>
+
+    <!-- strong and em elements -->
+    <p></p>
+    <h3>STRONG and EM elements</h3>
+    <p></p>
+    More important styling is in CSS
+    <p />
+    <p>
+      Hello there Edwine, this is a <strong>STRONG</strong> and here is
+      <em>EM</em> elements
+    </p>
+
+    <!-- Special Characters in our HTML -->
+    <h3>Special Characters in HTML</h3>
+    <p>Copyright &copy;</p>
+    <p>Most of them I can use google</p>
+
+    <!-- List Elements -->
+    <h3>List Item Elements</h3>
+    <p>This is a list item. We have two</p>
+    <p>
+
+      <ul>
+        <li>Unordered List</li>
+      </ul>
+      <ol>
+        <li>Ordered List</li>
+      </ol>
+      <!-- Nested list -->
+      <h3>Nested List</h3>
+      <ul>
+        <li>Unordered List</li>
+        <ol>
+          <li>Francis Arita</li>
+          <li>Jane Arita</li>
+        </ol>
+      </ul>
+      <ol>
+        <li>Ordered List</li>
+        <ul>
+          <li>Geofrey Arita</li>
+          <li>Thaddeus Arita</li>
+        </ul>
+      </ol>
+    </p>
+    <!-- tables element -->
+    <h3>Table Elemets</h3>
+    <p>The table has columns for td, rows for tr and table headings for th</p>
+    <th> <strong>ATOMIC TRADERS</strong></th>
+    <table>
+      <tr>
+        <th>NAME</th>
+        <th>PAIRS</th>
+        <th>COUNTY</th>
+      </tr>
+
+      <tr>
+        <td>1. Edwine</td>
+        <td>EU</td>
+        <td>Kisii</td>
+      </tr>
+
+      <tr>
+          <td>2. DavieKE</td>
+          <td>EU</td>
+          <td>Nairobi</td>
+        </tr>
+
+      <tr>
+        <td>3. Monica</td>
+        <td>EU</td>
+        <td>Nairobi</td>
+      </tr>
+    </table>
+<!-- Creating Forms -->
+<h3>HTML Form Creation</h3>
+    <form action="" method="" >
+      <!-- <label for="firstName">First Name</label> -->
+      First Name:<input type="text" name="firstName" id="firstName" placeholder="Type Your Name">
+      <br>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" placeholder="Type your Password" >
+      <br>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" value="email@email">
+      <br>
+      <p>Using Radio Buttons</p>
+      <input type="radio" name="Coding" id="" value="Java" >Java
+      <input type="radio" name="Coding" id="" value="Javascript" >Javascript
+      <input type="radio" name="Coding" id="" value="Python" >Python
+      <br>
+      <p>Using Checkboxes</p>
+      <input type="checkbox" name="Programming" id="" value="Java" > Java
+      <input type="checkbox" name="Programming" id="" value="Javascript" > Javascript
+      <input type="checkbox" name="Programming" id="" value="Python" > Python
+      <br>
+      <p>Using Select Input Option</p>
+      <select name="Languages" id="">
+        <option value="Java">Java</option>
+        <option value="Javascript">Javascript</option>
+        <option value="Python">Python</option>
+      </select>
+      <br>
+      <p>Description</p>
+      <textarea name="" id="" cols="30" rows="2"></textarea>
+      <br>
+      <!-- <label for="register">Register</label> -->
+      Register:<input type="submit" value="Submit Here" style="background-color: aqua; cursor:pointer">
+    </form><br>
+    <footer>Made Of Love</footer>
+  </body>
+</html>
