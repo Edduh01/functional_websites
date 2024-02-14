@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+    <title>Atom Simulation</title>
+  </head>
+  <body>
+    <canvas id="atomCanvas"></canvas>
+
+    <script>
+      const canvas = document.getElementById("atomCanvas");
+      const ctx = canvas.getContext("2d");
+      const nucleusSize = 20;
+      const electrons = [];
+      const rayCount = 8;
+
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      class Electron {
+        constructor(angle, distance, speed) {
+          this.angle = angle;
+          this.distance = distance;
+          this.speed = speed;
+          this.size = 2;
+        }
+
+        update() {
+          this.angle += this.speed;
+        }
+
+        draw() {
+          const x = canvas.width / 2 + Math.cos(this.angle) * this.distance;
+          const y = canvas.height / 2 + Math.sin(this.angle) * this.distance;
+
+          ctx.beginPath();
+          ctx.arc(x, y, this.size, 0, Math.PI * 2);
+          ctx.fillStyle = "white";
+          ctx.fill();
+          ctx.closePath();
+        }
+      }
+
+      function createElectrons() {
+        for (let i = 0; i < rayCount; i++) {
+          const angle = Math.PI * 2 * (i / rayCount);
+          const distance = 50 + i * 20;
+          const speed = 0.02 * (i % 2 === 0 ? 1 : -1); // Alternating direction
+
+          electrons.push(new Electron(angle, distance, speed));
+        }
+      }
+
+      function animateAtom() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Draw nucleus
+        ctx.beginPath();
+        ctx.arc(
+          canvas.width / 2,
+          canvas.height / 2,
+          nucleusSize,
+          0,
+          Math.PI * 2
+        );
+        ctx.fillStyle = "red"; // Color of the nucleus
+        ctx.fill();
+        ctx.closePath();
+
+        // Update and draw electrons
+        for (let i = 0; i < electrons.length; i++) {
+          electrons[i].update();
+          electrons[i].draw();
+        }
+
+        requestAnimationFrame(animateAtom);
+      }
+
+      window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        createElectrons();
+      });
+
+      createElectrons();
+      animateAtom();
+    </script>
+  </body>
+</html>

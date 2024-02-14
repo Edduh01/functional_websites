@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+    <title>Atom Rays</title>
+</head>
+<body>
+    <canvas id="atomCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('atomCanvas');
+        const ctx = canvas.getContext('2d');
+        const rays = [];
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        class Ray {
+            constructor(angle, radius, speed) {
+                this.angle = angle;
+                this.radius = radius;
+                this.speed = speed;
+                this.x = canvas.width / 2 + Math.cos(angle) * radius;
+                this.y = canvas.height / 2 + Math.sin(angle) * radius;
+            }
+
+            update() {
+                this.angle += this.speed;
+                this.x = canvas.width / 2 + Math.cos(this.angle) * this.radius;
+                this.y = canvas.height / 2 + Math.sin(this.angle) * this.radius;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+                ctx.fillStyle = 'white';
+                ctx.fill();
+                ctx.closePath();
+            }
+        }
+
+        function createRays() {
+            const rayCount = 8;
+            const radius = 50;
+
+            for (let i = 0; i < rayCount; i++) {
+                const angle = (Math.PI * 2) * (i / rayCount);
+                const speed = 0.02 * (i % 2 === 0 ? 1 : -1); // Alternating direction
+
+                rays.push(new Ray(angle, radius, speed));
+            }
+        }
+
+        function animateRays() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < rays.length; i++) {
+                rays[i].update();
+                rays[i].draw();
+            }
+
+            requestAnimationFrame(animateRays);
+        }
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            createRays();
+        });
+
+        createRays();
+        animateRays();
+    </script>
+</body>
+</html>
