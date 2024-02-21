@@ -3,26 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex Box</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flexbox Tutorial</title>
+    <link rel="stylesheet" href="styles.css" />
     <style>
+      /* flex-wrap */
+      /* nowrap(default) wrap wrap-reverse */
       .container {
-        /* display: inline-flex; */
         display: flex;
-        /* flex-direction: row; */
+        /* flex-direction: row ===  default*/
+        /* flex-wrap: nowrap; */
         flex-wrap: wrap;
-        flex-flow: initial;
-        flex-basis: 150px;
-        justify-content: center;
-        /* flex-direction: row; */
-        padding: 0;
+        /* flex-wrap: wrap-reverse; */
       }
     </style>
   </head>
   <body>
-    <!-- parent=flex-container -->
+    <!--parent = flex-container  -->
     <div class="container">
-      <!-- children= flex-items -->
+      <!-- children = flex-items -->
       <div class="box box-1">1</div>
       <div class="box box-2">2</div>
       <div class="box box-3">3</div>
