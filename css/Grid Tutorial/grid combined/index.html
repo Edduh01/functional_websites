@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Tutorial</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .container {
+        min-height: 100vh;
+        display: grid;
+        /* padding: 17rem; */
+        /* border: 2px solid black; */
+        margin: 7rem;
+        /* units
+        we have px, em, rem, % , auto and fr and fr are better*/
+        /* grid-template-columns: 1fr 300px auto; */
+        /* grid-template-columns: 1fr 1fr 1fr; */
+        grid-template-columns: [start]100px [col-1-end] 100px[col-2-end] 100px[end];
+        /* grid-template-rows: 13rem 20em 20%; */
+        grid-template-rows: [start]100px[row-1-end] 100px[row-2-end] 100px[end];
+        /* grid-column-gap: 20px; */
+        /* grid-row-gap: 20px; */
+        /* I overide the above
+        first, all of them in one and if speicifed, fist is for the rows and 2nd for the column */
+        /* grid-gap: 50px 100px; */
+        column-gap: 50px;
+        row-gap: 50px;
+        gap: 100px 25px;
+        gap: 10px;
+        grid-gap: 1rem;
+      }
+      .cell-1 {
+        grid-column: start/4;
+        grid-row: start/[row-2-end];
+      }
+    </style>
+  </head>
+  <body>
+    <!-- color values -->
+    <div class="container">
+      <div class="cell cell-1">cell 1</div>
+      <div class="cell cell-2">cell 2</div>
+      <div class="cell cell-3">cell 3</div>
+      <div class="cell cell-4">cell 4</div>
+      <div class="cell cell-5">cell 5</div>
+      <div class="cell">cell 6</div>
+      <div class="cell">cell 7</div>
+    </div>
+  </body>
+</html>
