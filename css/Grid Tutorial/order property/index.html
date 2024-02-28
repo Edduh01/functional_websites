@@ -4,37 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Grid Tutorial</title>
     <link rel="stylesheet" href="styles.css" />
-    <title>Document</title>
     <style>
+      /* order  */
       .container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 100px 100px 100px 100px 100px;
-        grid-template-areas:
-          "a a b"
-          "a a b"
-          "c c b"
-          "d d d"
-          "e f f";
+        grid-template-rows: 100px 100px;
       }
       .cell-1 {
-        grid-area: a;
-      }
-      .cell-2 {
-        grid-area: b;
-      }
-      .cell-3 {
-        grid-area: c;
-      }
-      .cell-4 {
-        grid-area: d;
-      }
-      .cell-5 {
-        grid-area: e;
+        order: 2;
       }
       .cell-6 {
-        grid-area: f;
+        order: -1;
+      }
+      .cell-5 {
+        order: 3;
+      }
+      .cell-3 {
+        order: 4;
       }
     </style>
   </head>

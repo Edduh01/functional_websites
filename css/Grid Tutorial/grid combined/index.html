@@ -7,39 +7,31 @@
     <link rel="stylesheet" href="styles.css" />
     <style>
       .container {
+        /* min-height: 100vh; */
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 100px 100px 100px 100px 100px;
-        grid-template-areas:
-          "a a b"
-          "a a b"
-          "c c b"
-          " d d d"
-          "e f f";
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       }
-      .cell-1 {
-        grid-area: a;
-      }
-      .cell-2 {
-        grid-area: b;
-      }
-      .cell-3 {
-        grid-area: c;
-      }
-      .cell-4 {
-        grid-area: d;
-      }
-      .cell-5 {
-        grid-area: e;
-      }
-      .cell-6 {
-        grid-area: f;
+      .container-1 {
+        /* min-height: 100vh; */
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       }
     </style>
   </head>
   <body>
+    <h1>Auto Fit</h1>
     <!-- color values -->
     <div class="container">
+      <div class="cell cell-1">cell 1</div>
+      <div class="cell cell-2">cell 2</div>
+      <div class="cell cell-3">cell 3</div>
+      <div class="cell cell-4">cell 4</div>
+      <div class="cell cell-5">cell 5</div>
+      <div class="cell cell-6">cell 6</div>
+    </div>
+    <h1>Auto Fill</h1>
+    <!-- color values -->
+    <div class="container-1">
       <div class="cell cell-1">cell 1</div>
       <div class="cell cell-2">cell 2</div>
       <div class="cell cell-3">cell 3</div>
