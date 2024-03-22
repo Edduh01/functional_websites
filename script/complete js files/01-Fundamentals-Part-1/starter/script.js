@@ -1,13 +1,23 @@
 /*
+alert("Hello World!");
+// The alert will appear in the browser window.
+let js = "amazing";
+
+if (js === "amazing") alert("JavaScript is FUN!");
+
+// The above asks if js is amazing to run the FUN code and it is true
+js = "boring";
+if (js === "amazing") alert("JavaScript is FUN!");
+// This code asks if js is amazing. Which is not true, so it won't be executed
+
+// Math Problem
+100 + 40 - 20;
+//These values are not displayed in the console because the J.S has not instructed it to.
+console.log(100 + 40 - 20);
+//These are now displayed in the console because they have been subjected to the console. They are all values joined together to form one value
 // I can use either let or const
 // The letters in J.S are case sensitive
 const Trading = "amazing";
-
-100 + 40 - 20;
-//These values are not displayed in the console because the J.S has not instructed it to.
-
-console.log(100 + 40 - 20);
-//These are now displayed in the console because they have been subjected to the console. They are all values joined together to form one value
 
 //Values and Variables.
 // Values are the smallest unit of information in J.S
@@ -16,14 +26,16 @@ console.log(25);
 // and they are stored in variables for them to be reused. Example below
 const firstName = "Edwine";
 //This is a variable declaration
-// Variables are like boxes that holds some objects. So the Variable holds a value. It is like a label.
+// Variables are like boxes that holds some objects. So the Variable holds a value.
+
+// It is like a label.
 // Above example, the variable is the firstName and the Edwine is the value. The FirstName holds the name Edwine
 console.log(firstName);
 //So here the above variable declaration worked
 // console.log(firstName);
-// console.log(firstName);
+// console.log(lasttName);
 //I can only change the value (Edwine) and they automaticaly gets changed in the variable name.
-// The J.S code can only contains letters numbers, dollar sign and under scores.
+// The J.S code can only contains letters, numbers, dollar sign and under scores.
 // Errors can also occure when using resevered J.S key words. Examples are words like new, function.
 // But there is a name that is reserved but still allowed to be used like name.
 // I can not as well start a variable name with upper case. Some upper case names are also reserved, they might not change. e.g PI =3.1415 as shown below.
@@ -34,12 +46,12 @@ const myCurrentJob = "Programmer";
 console.log(myFirstJob);
 console.log(myCurrentJob);
 //Done for the values and variabes
-
+*/
 
 // DATA TYPES (Object or Primitive)
 //They are 7 of primitive data types. But we focus on Number, String and Boolean
 // It is the value that determine a data type and the variable holds the value
-
+/*
 let javascriptIsFun = true;
 console.log(javascriptIsFun); //A boolean in a variable
 console.log(typeof true); //A boolean
@@ -48,7 +60,7 @@ console.log(typeof javascriptIsFun); //A boolean
 console.log(typeof "Edwine"); //A string
 
 javascriptIsFun = "YES!";
-console.log(typeof javascriptIsFun); //A boolean in a variable
+console.log(typeof javascriptIsFun); //A boolean in a variable to give a string
 
 let year;
 console.log(typeof year);
@@ -58,10 +70,10 @@ console.log(typeof null); //This is a bug
 
 // LET, CONST AND VAR DECLARATION(KEY WORDS)
 let age = 23;
-age = 23; //Mutating the variables we use let. Also used in empty variables
+age = 25; //Mutating the variables we use let. Also used in empty variables
 console.log(age);
 
-const birthYear = 2000; //This might not change in the future
+const birthYear = 2000; //This can not changed in the future
 console.log(birthYear); //In the console
 console.log(typeof birthYear); //Number data type. Remember the value carries the data type
 // birthYear = 1999; - Will bring a bug
@@ -73,7 +85,7 @@ console.log(firstJob, currentJob); //In the console
 
 lastName = "Edwine"; //Don't do this.
 console.log(lastName); //I should always declare variables and not do it like this without a declaration even if it works because this is a terrible idea
-const language = "Kiswahili";
+const language = "Biology";
 console.log(language);
 
 const birthMonth = "July";
@@ -82,22 +94,28 @@ let careerName = "Teacher"; //Can change
 console.log(careerName); //In the console
 careerName = "Programmer"; //Changed from teacher to programmer using let. const won't allow this
 console.log(careerName); //consoled
+*/
+/*
 
-//BASIC OPERATORS
+//BASIC OPERATORS = Allows us to transform
+
 //Math Operators
-const now = 2023;
+const now = 2024;
 const ageEdwine = now - 1998;
-const ageEmmah = now - 2004;
+const ageVivian = now - 2003;
 console.log(ageEdwine);
-console.log(ageEmmah);
-console.log(ageEdwine, ageEmmah);
+console.log(ageVivian);
+// above are seperate logins
+console.log(ageEdwine, ageVivian); //can log them both
 
-console.log(ageEdwine * 2, ageEdwine / 2, 2 ** 3); // 2**3 means to the power of 3 =2*2*2
+console.log(ageEdwine / 2 + 7);
 
 const firstName = "Edwine";
 const lastName = "Arita";
 console.log(firstName + " " + lastName);
+// the above + is used to join strings
 
+// assignment operators
 let x = 10 + 5; //10+5 is done first then assigned to x
 x += 10; //at this line x=15 already so it just add 10 =25
 x *= 4; //x=x*4 =100
@@ -106,14 +124,16 @@ x--;
 console.log(x);
 
 //Comparison Operators to produce a boolean value
-console.log(ageEdwine > ageEmmah); //<,>,>= and <=
-console.log(ageEmmah <= 18);
+console.log(ageEdwine > ageVivian); //<,>,>= and <=
+console.log(ageVivian <= 18);
 
 console.log(now - 1998 > now - 2004); //J.S started with seperate operations then it did a comparison then
+/*
+
 
 const now = 2023;
 const ageEdwine = now - 1998;
-const ageEmmah = now - 2004;
+const ageVivian = now - 2004;
 
 console.log(now - 1998 > now - 2004); //The difference is done before the comparison
 
@@ -122,24 +142,28 @@ let x, y;
 x = y = 25 - 10 - 5; //Same variables declared x=y=10, x=10
 console.log(x, y);
 
-const averageAge = (ageEdwine + ageEmmah) / 2;
-console.log(ageEdwine, ageEmmah, averageAge);
+const averageAge = (ageEdwine + ageVivian) / 2;
+console.log(ageEdwine, ageVivian, averageAge);
 
+
+//STRINGS AND LITERALS
 const firstName = "Edwine";
 const job = "Programmer";
 const birthYear = 1998;
 const year = 2023;
 
+// USING STRINGS = Not the best way
 const edwine =
   " I'm " +
   firstName +
-  ",a " +
+  ", a " +
   (year - birthYear) +
   " years old " +
   job +
   " ! ";
 console.log(edwine);
 
+// USING LITERALS = The best way
 const edwineNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}`;
 console.log(edwineNew);
 
@@ -153,6 +177,8 @@ const firstName = "Edwine";
 const currentJob = "Progrmmer";
 const birthYear = 1998;
 const currentYear = 2023;
+
+
 //Using the old fashion without template literals
 const edwine =
   " I'm " +
@@ -171,25 +197,28 @@ console.log(edwineNew);
 
 //TAKING DECISIONS WITH IF/ELSE STATEMENT (CONTROL STRUCTURE)
 const currentAge = 18;
-const isOldEnough = currentAge >= 20;
+// const isOldEnough = currentAge >= 20;
 
 if (currentAge >= 20) {
-  console.log("Emmah can start driving license");
+  console.log("Vivian can start driving license 🚗");
 } else {
+  // calc the years left
   const yearsLeft = 20 - currentAge;
+  // login to the console using a literal
   console.log(
-    `Emmah is young. Wait another ${yearsLeft} years to start driving license`
+    `Vivian is too young. Wait another ${yearsLeft} years to start driving license`
   );
 }
 
-const birthYear = 2004;
-let century;
+const birthYear = 2003;
+let century; //(empty variable)
 if (birthYear <= 2000) {
   century = 20;
 } else {
   century = 21;
 }
 console.log(century);
+
 
 //CONVERTING DATA TYPES
 //- Conversion = Manually by us
@@ -219,6 +248,7 @@ let n = "1" + 1; //The string 11
 n = n - 1;
 console.log(n);
 
+/*
 //TRUTHY AND FALSY VALUES
 //Falsy Values - Not false but they will become false when converted into boolean. Examples of those falsy value.
 // 0, '' undefined, null, NaN
@@ -379,20 +409,21 @@ console.log(drink); //The parts are seperated by a comma. The first is the if an
 
 //age >= 18? "wine🍷" : "water💧" (This is an expression that produces a value that is stored in the variable as shown above)
 */
-let age = 18;
+/*let age = 18;
 let drink2;
 if (age >= 18) {
   drink2 = "wine";
 } else {
   drink2 = "water";
 }
-console.log(drink2);
+console.log(drink2);*/
 //The above expression variable is declared outside the if else and the reassigned inside the if else statement.
 
-console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
+// console.log(`I like to drink ${age >= 18 ? "wine" : "water"}`);
 
 //JAVASCRIPT RELEASES ES5, ES6+ and ESNEXT!
 //ES for EcmaScript = history oj j.s
 //It was Mocha created in 10 days by Brendan then named to Livescript and then Javascript in NetScape.
 
 //Ecma is a standardization organization that was used to standardize the javascrippt after internet explore copying javascript from netscape and calling it JScript.
+// *

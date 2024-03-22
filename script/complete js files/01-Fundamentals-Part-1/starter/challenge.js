@@ -53,4 +53,39 @@ const tip = bill >=50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 console.log(
   `The bill was ${bill}, the tip was ${tip} and the total value ${bill + tip}`
 );
+
+
+// TASK ONE REPEAT
+let massMark = 78;
+let massJohn = 92;
+let heightMark = 1.69;
+let heightJohn = 1.95;
+console.log(massMark, massJohn, heightMark, heightJohn);
+
+let BMIMark = 78 / 1.69 ** 2;
+let BMIJohn = 92 / 1.95 ** 2;
+let markHigherBMI = BMIMark > BMIJohn;
+console.log(BMIMark, BMIJohn, markHigherBMI);
 */
+// TASK TWO REPEAT
+let massMark = 78;
+let massJohn = 92;
+let heightMark = 1.69;
+let heightJohn = 1.95;
+console.log(massMark, massJohn, heightMark, heightJohn);
+
+let BMIMark = 78 / 1.69 ** 2;
+let BMIJohn = 92 / 1.95 ** 2;
+let markHigherBMI = BMIMark > BMIJohn;
+console.log(BMIMark, BMIJohn, markHigherBMI);
+
+if (BMIMark > BMIJohn) {
+  console.log(`Mark's BMI is higher than John's`);
+} else {
+  console.log(`John's BMI is higher than Mark's`);
+}
+if (BMIMark > BMIJohn) {
+  console.log(`Mark's BMI (${BMIMark})is higher than John's (${BMIJohn})`);
+} else {
+  console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})`);
+}
