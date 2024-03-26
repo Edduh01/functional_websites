@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Card Slider</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style - copy.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+    ></script>
+    <script defer src="./main - copy.js"></script>
+  </head>
+  <body>
+    <div class="slider-container swiper">
+      <div class="slider-content">
+        <div class="card-wrapper swiper-wrapper">
+          <!-- single-item -->
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <div class="card-image">
+                <img src="./products/packages.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">Product Offer</h2>
+              <p class="description">Product Description</p>
+            </div>
+          </div>
+          <!-- end of single item -->
+
+          <!-- start of single item -->
+          <div class="card swiper-slide">
+            <div class="image-content">
+              <div class="card-image">
+                <img src="./image/profile1.jpg" class="card-img" alt="" />
+              </div>
+            </div>
+            <div class="card-content">
+              <h2 class="name">Product Offer</h2>
+              <p class="description">Product Description</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next swiper-navBtn"></div>
+      <div class="swiper-button-prev swiper-navBtn"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <!-- end of single item -->
+  </body>
+</html>
